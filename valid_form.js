@@ -2,12 +2,12 @@ const prenom = document.getElementById('first');
 const nom = document.getElementById('last');
 const mail = document.getElementById('email');
 const regex = /^[a-zA-Z][a-z]+([-'][a-zA-z][a-z]+)?/;
-const regexMail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+const regexMail = /^[a-z0-9_\.\-]+\@[a-z0-9\-_]+\.[a-z0-9]{2,6}$/i;
 const input = document.getElementsByClassName('text-control');
 const form = document.getElementById('form');
 
 const birthdate = document.getElementById('birthdate');
-let birth = new Date(document.getElementById('birthdate').value);
+
 let maDate = new Date();
 
 const quantity = document.getElementById('quantity');
@@ -74,6 +74,7 @@ function checkMail() {
 }
 
 function checkBirthdate() {
+    let birth = new Date(document.getElementById('birthdate').value);
     if (birthdate.value.trim().length !== 10) {
         birthdate.parentElement.setAttribute('data-error-visible', 'true');
         birthdate.parentElement.setAttribute('data-error', 'Veuillez indiquer une date');
