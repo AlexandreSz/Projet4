@@ -175,6 +175,7 @@ label {
     font-weight: normal;
     display: inline-block;
     margin-bottom: 11px;
+    margin-top: 11px;
 }
 
 input {
@@ -518,22 +519,21 @@ footer {
 
 .container-confirmation-submit {
     display: none;
-    background-color: rgba(35, 35, 35, .5);
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(232, 232, 237, 0.838);
 }
 
 .submitted-form {
-    width: 100%;
+    max-width: 500px;
     height: 100%;
     left: 0;
+    right: 0;
     margin: 0 auto;
     position: fixed;
     top: 0px;
@@ -583,7 +583,7 @@ footer {
 
 #close-btn-confirmation {
     position: relative;
-    top: -165px;
+    top: -130px;
     outline: none;
     border: none;
     font-size: 22px;
